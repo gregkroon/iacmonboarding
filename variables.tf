@@ -13,3 +13,7 @@ variable "HARNESS_PROJECT_ID" {
 variable "HARNESS_ORG_ID" {
  type        = string
  }
+
+variable "WORKSPACE_ID" {
+ type        = string
+ }
