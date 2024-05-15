@@ -12,14 +12,28 @@ provider "harness" {
   endpoint = "https://app.harness.io/gateway"
 }
 
-
-
 resource "harness_platform_project" "project" {
   name = var.HARNESS_PROJECT_ID
   identifier  = var.HARNESS_PROJECT_ID
   org_id      = var.HARNESS_ORG_ID
   description = "Example project description"
 }
+
+resource "harness_platform_connector_aws" "aws_connector" {
+  identifier = var.HARNESS_AWS_CONNECTOR_ID
+
+  aws_manual {
+    access_key = var.AWS_ACCESS_KEY
+    secret_key = var.AWS_SECRET_KEY
+  }
+}
+
+
+
+
+
+
+
 
 resource "harness_platform_workspace" "workspace" {
   name        = var.HARNESS_WORKSPACE_ID
