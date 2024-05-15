@@ -22,8 +22,8 @@ resource "harness_platform_project" "project" {
 }
 
 resource "harness_platform_workspace" "workspace" {
-  name        = var.WORKSPACE_ID
-  identifier  = var.WORKSPACE_ID
+  name        = var.HARNESS_WORKSPACE_ID
+  identifier  = var.HARNESS_WORKSPACE_ID
   org_id      = var.HARNESS_ORG_ID
   project_id  = var.HARNESS_PROJECT_ID
   description = "Example workspace description"
