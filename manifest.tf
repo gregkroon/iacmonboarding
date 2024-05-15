@@ -1,6 +1,15 @@
+terraform {
+  required_providers {
+    harness = {
+      source = "harness/harness"
+    }
+  }
+}
+
 provider "harness" {
   api_key = var.HARNESS_API_KEY
   account_id = var.HARNESS_ACCOUNT_ID
+  endpoint         = "https://app.harness.io/gateway"
 }
 
 
