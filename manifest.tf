@@ -27,4 +27,14 @@ resource "harness_platform_workspace" "workspace" {
   org_id      = var.HARNESS_ORG_ID
   project_id  = var.HARNESS_PROJECT_ID
   description = "Example workspace description"
+
+
+  cost_estimation_enabled = var.HARNESS_COST_ESTIMATION_ENABLED
+  provisioner_version = var.HARNESS_PROVISIONER_VERSION
+  repository_path = var.HARNESS_REPO_PATH
+  repository = var.HARNESS_REPO
+  provider_connector = var.HARNESS_PROVIDER_CONNECTOR
+  provisioner_type = var.HARNESS_PROVISONER_TYPE
+  repository_connector = var.HARNESS_REPO_CONNECTOR
+
 }
