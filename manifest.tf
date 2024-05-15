@@ -20,3 +20,11 @@ resource "harness_platform_project" "project" {
   org_id      = var.HARNESS_ORG_ID
   description = "Example project description"
 }
+
+resource "harness_platform_workspace" "workspace" {
+  name        = "example_workspace"
+  identifier  = "example_workspace_id"
+  org_id      = var.HARNESS_ORG_ID
+  project_id  = var.HARNESS_PROJECT_ID
+  description = "Example workspace description"
+}
