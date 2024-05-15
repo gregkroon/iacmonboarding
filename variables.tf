@@ -14,6 +14,6 @@ variable "HARNESS_ORG_ID" {
  type        = string
  }
 
-variable "WORKSPACE_ID" {
+variable "HARNESS_WORKSPACE_ID" {
  type        = string
  }
