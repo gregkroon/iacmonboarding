@@ -29,12 +29,6 @@ resource "harness_platform_connector_aws" "aws_connector" {
 }
 
 
-
-
-
-
-
-
 resource "harness_platform_workspace" "workspace" {
   name        = var.HARNESS_WORKSPACE_ID
   identifier  = var.HARNESS_WORKSPACE_ID
