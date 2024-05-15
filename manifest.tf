@@ -28,6 +28,10 @@ resource "harness_platform_connector_aws" "aws_connector" {
   }
 }
 
+resource "harness_platform_connector_github" "github_connector" {
+  identifier = var.HARNESS_GUTHUB_CONNECTOR_ID
+}
+
 
 resource "harness_platform_workspace" "workspace" {
   name        = var.HARNESS_WORKSPACE_ID
