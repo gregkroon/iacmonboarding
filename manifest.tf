@@ -5,10 +5,9 @@ provider "harness" {
 
 
 
-
-resource "harness_platform_project" "example_project" {
-  name        = "example_project"
-  identifier  = "example_project_id"
-  org_id      = "example_org_id"
+resource "harness_platform_project" "project" {
+  name        = var.HARNESS_PROJECT_ID
+  identifier  = var.HARNESS_PROJECT_ID
+  org_id      = var.HARNESS_ORG_ID
   description = "Example project description"
 }
