@@ -100,7 +100,7 @@ resource "harness_platform_connector_github" "github_connector" {
 
 resource "harness_platform_workspace" "workspace" {
 
-depends_on = [harness_platform_connector_github.github_connector,harness_platform_connector_aws.awsconnector]
+depends_on = [harness_platform_connector_github.github_connector,harness_platform_connector_aws.aws_connector]
 
   name        = var.HARNESS_WORKSPACE_ID
   identifier  = var.HARNESS_WORKSPACE_ID
