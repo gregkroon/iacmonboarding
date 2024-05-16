@@ -66,3 +66,12 @@ variable "HARNESS_AWS_CONNECTOR_ID" {
 variable "HARNESS_GITHUB_URL" {
  type        = string
  }
+
+variable "GITHUB_USER" {
+ type        = string
+ }
+
+variable "GITHUB_TOKEN_REF" {
+ type        = string
+ }
+
