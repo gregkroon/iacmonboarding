@@ -59,6 +59,8 @@ variable "AWS_SECRET_KEY" {
  type        = string
  }
 
-
+variable "HARNESS_AWS_CONNECTOR_ID" {
+ type        = string
+ }
 
  
