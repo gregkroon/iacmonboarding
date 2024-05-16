@@ -36,11 +36,12 @@ resource "harness_platform_secret_text" "githubsecret" {
 
 
 
-
-
 resource "harness_platform_connector_aws" "aws_connector" {
- 
+
+depends_on = [harness_platform_project.project]
+
   org_id      = var.HARNESS_ORG_ID
+  project_id  = var.HARNESS_PROJECT_ID
   identifier = var.HARNESS_AWS_CONNECTOR_ID
   name = var.HARNESS_AWS_CONNECTOR_ID
 
