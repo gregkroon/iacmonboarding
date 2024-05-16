@@ -44,11 +44,6 @@ variable "HARNESS_GITHUB_CONNECTOR_ID" {
  type        = string
  }
 
-variable "HARNESS_REPO_CONNECTOR" {
- type        = string
- }
-
-
 variable "AWS_ACCESS_KEY" {
  type        = string
  }
