@@ -74,8 +74,10 @@ depends_on = [harness_platform_secret_text.awssecret]
 
 resource "harness_platform_connector_github" "github_connector" {
 
-depends_on = [harness_platform_secret_text.githubsecret]
+  depends_on = [harness_platform_secret_text.githubsecret]
 
+  org_id      = var.HARNESS_ORG_ID
+  project_id  = var.HARNESS_PROJECT_ID
   identifier = var.HARNESS_GITHUB_CONNECTOR_ID
   connection_type = "Account"
   name = var.HARNESS_GITHUB_CONNECTOR_ID
