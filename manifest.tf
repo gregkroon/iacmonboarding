@@ -25,8 +25,12 @@ resource "harness_platform_connector_aws" "aws_connector" {
   identifier = var.HARNESS_AWS_CONNECTOR_ID
   name = var.HARNESS_AWS_CONNECTOR_ID
 
-  access_key = var.AWS_ACCESS_KEY
-  secret_key = var.AWS_SECRET_KEY
+ auth_type  = "MANUAL"
+
+  credentials {
+    access_key = var.AWS_ACCESS_KEY
+    secret_key = var.AWS_SECRET_KEY
+  }
 }
 
 resource "harness_platform_connector_github" "github_connector" {
