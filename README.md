@@ -1,4 +1,4 @@
-### Example YAML
+### Example YAML delegate
 
  yaml = <<-EOT
   pipeline:
@@ -54,5 +54,55 @@
                     add: []
                 os: Linux
                 hostNames: []
+
+
+### Example YAML hosted
+
+yaml = <<-EOT
+  pipeline:
+    name: onboarding
+    identifier: onboarding
+    projectIdentifier: ${var.HARNESS_PROJECT_ID}
+    orgIdentifier: ${var.HARNESS_ORG_ID}
+    tags: {}
+    stages:
+      - stage:
+          name: onboarding
+          identifier: onboarding
+          description: ""
+          type: IACM
+          spec:
+            platform:
+              os: Linux
+              arch: Amd64
+            runtime:
+              type: Cloud
+              spec: {}
+            workspace: ${harness_platform_workspace.workspace.identifier}
+            execution:
+              steps:
+                - step:
+                    type: IACMTerraformPlugin
+                    name: init
+                    identifier: init
+                    timeout: 10m
+                    spec:
+                      command: init
+                - step:
+                    type: IACMTerraformPlugin
+                    name: plan
+                    identifier: plan
+                    timeout: 10m
+                    spec:
+                      command: plan
+                - step:
+                    type: IACMTerraformPlugin
+                    name: apply
+                    identifier: apply
+                    timeout: 10m
+                    spec:
+                      command: apply
+          tags: {}
+  EOT
           tags: {}
   EOT
