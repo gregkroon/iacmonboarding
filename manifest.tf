@@ -120,46 +120,60 @@ depends_on = [harness_platform_connector_github.github_connector,harness_platfor
 
 }
 
-/*
+
 resource "harness_platform_pipeline" "pipeline" {
   org_id     = var.HARNESS_ORG_ID
   project_id = var.HARNESS_PROJECT_ID
   identifier = var.HARNESS_WORKSPACE_ID
   name       = var.HARNESS_WORKSPACE_ID
 
-
-
-      execution {
-    steps {
-      step {
-        type       = "IACM"
-        name       = "IACM Stage"
-        identifier = "IACM_STAGE"
-        spec {
-          configuration {
-            workspace_ref = harness_platform_workspace.workspace.id
-          }
-          execution {
-            steps {
-              step {
-                type       = "TerraformApply"
-                name       = "Apply Terraform"
-                identifier = "APPLY_TERRAFORM"
-                spec {
-                  configuration {
-                    command = "apply"
-                    var_file {
-                      identifier = "example.tfvars"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
+yaml = <<-EOT
+  pipeline:
+    name: onboarding
+    identifier: onboarding
+    projectIdentifier: ${var.HARNESS_PROJECT_ID}
+    orgIdentifier: ${var.HARNESS_ORG_ID}
+    tags: {}
+    stages:
+      - stage:
+          name: onboarding
+          identifier: onboarding
+          description: ""
+          type: IACM
+          spec:
+            platform:
+              os: Linux
+              arch: Amd64
+            runtime:
+              type: Cloud
+              spec: {}
+            workspace: ${harness_platform_workspace.workspace.identifier}
+            execution:
+              steps:
+                - step:
+                    type: IACMTerraformPlugin
+                    name: init
+                    identifier: init
+                    timeout: 10m
+                    spec:
+                      command: init
+                - step:
+                    type: IACMTerraformPlugin
+                    name: plan
+                    identifier: plan
+                    timeout: 10m
+                    spec:
+                      command: plan
+                - step:
+                    type: IACMTerraformPlugin
+                    name: apply
+                    identifier: apply
+                    timeout: 10m
+                    spec:
+                      command: apply
+          tags: {}
+  EOT
 }
 
-*/
+
+
