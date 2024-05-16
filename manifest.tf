@@ -26,7 +26,7 @@ resource "harness_platform_secret_text" "githubsecret" {
   identifier = var.HARNESS_GITHUB_SECRET_NAME
   secret_manager_identifier = "harness"
   value = var.HARNESS_GITHUB_SECRET_VALUE
-  value_type = "inline"
+  value_type = "Inline"
   
   
 }
