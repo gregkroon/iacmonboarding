@@ -38,9 +38,11 @@ resource "harness_platform_connector_github" "github_connector" {
   name = var.HARNESS_GITHUB_CONNECTOR_ID
   url =  var.HARNESS_GITHUB_URL
 
-  username      = var.GITHUB_USER
-  token_ref     = var.GITHUB_TOKEN_REF
-
+  api_authentication {
+    type          = "UsernameToken"
+    username      = var.GITHUB_USER
+    token_ref     = var.GITHUB_TOKEN_REF
+  }
 
 
 }
