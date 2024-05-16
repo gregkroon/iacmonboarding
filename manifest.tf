@@ -140,19 +140,29 @@ resource "harness_platform_pipeline" "pipeline" {
       }
 
       execution {
-        steps {
-          step {
-            name       = "Apply Terraform"
-            identifier = "APPLY_TERRAFORM"
-            type       = "TerraformApply"
-            spec {
-              configuration {
-                secret_id = "AWS_SECRET_KEY"
-                access_key = var.AWS_ACCESS_KEY
-                branch = var.HARNESS_REPO_BRANCH
-                repo = var.HARNESS_REPO
-                path = var.HARNESS_REPO_PATH
-                connector_ref = var.HARNESS_GITHUB_CONNECTOR_ID
+    steps {
+      step {
+        type       = "IACM"
+        name       = "IACM Stage"
+        identifier = "IACM_STAGE"
+        spec {
+          configuration {
+            workspace_ref = harness_platform_workspace.workspace.id
+          }
+          execution {
+            steps {
+              step {
+                type       = "TerraformApply"
+                name       = "Apply Terraform"
+                identifier = "APPLY_TERRAFORM"
+                spec {
+                  configuration {
+                    command = "apply"
+                    var_file {
+                      identifier = "example.tfvars"
+                    }
+                  }
+                }
               }
             }
           }
