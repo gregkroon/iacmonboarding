@@ -32,7 +32,7 @@ resource "harness_platform_secret_text" "githubsecret" {
 }
 
 
-
+/*
 
 
 resource "harness_platform_connector_aws" "aws_connector" {
@@ -64,6 +64,8 @@ resource "harness_platform_connector_github" "github_connector" {
 
 
 }
+
+*/
 
 /*
 resource "harness_platform_workspace" "workspace" {
