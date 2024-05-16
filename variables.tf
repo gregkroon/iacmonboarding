@@ -67,7 +67,7 @@ variable "HARNESS_GITHUB_URL" {
  type        = string
  }
 
-variable "GITHUB_USER" {
+variable "GITHUB_USER_REF" {
  type        = string
  }
 
