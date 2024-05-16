@@ -73,6 +73,9 @@ variable "HARNESS_GITHUB_CONNECTOR_ID" {
  type        = string
  }
 
+variable "GITHUB_USER" {
+ type        = string
+ }
 
 variable "GITHUB_USER_REF" {
  type        = string
