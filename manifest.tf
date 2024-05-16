@@ -35,6 +35,7 @@ resource "harness_platform_connector_github" "github_connector" {
   identifier = var.HARNESS_GITHUB_CONNECTOR_ID
   connection_type = "Account"
   name = var.HARNESS_GITHUB_CONNECTOR_ID
+  url =  var.HARNESS_GITHUB_URL
 }
 
 /*
