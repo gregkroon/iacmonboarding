@@ -50,7 +50,7 @@ variable "HARNESS_GITHUB_CONNECTOR_ID" {
 variable "HARNESS_REPO_CONNECTOR" {
  type        = string
  }
-/*
+*/
 
 
 variable "AWS_ACCESS_KEY" {
