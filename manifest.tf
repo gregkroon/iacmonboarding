@@ -51,10 +51,10 @@ resource "harness_platform_secret_text" "awssecret" {
 
 
 
-/*
+
 resource "harness_platform_connector_aws" "aws_connector" {
 
-depends_on = [harness_platform_project.project]
+depends_on = [harness_platform_secret_text.awssecret]
 
   org_id      = var.HARNESS_ORG_ID
   project_id  = var.HARNESS_PROJECT_ID
@@ -63,12 +63,12 @@ depends_on = [harness_platform_project.project]
 
    manual {
     access_key = var.AWS_ACCESS_KEY
-    secret_key_ref = var.AWS_SECRET_KEY
+    secret_key_ref = "AWS_SECRET_KEY"
 
 }
 }
 
-*/
+
 
 /*
 
