@@ -63,4 +63,6 @@ variable "HARNESS_AWS_CONNECTOR_ID" {
  type        = string
  }
 
- 
+variable "HARNESS_GITHUB_URL" {
+ type        = string
+ }
