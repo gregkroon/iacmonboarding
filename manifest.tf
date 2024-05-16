@@ -19,6 +19,20 @@ resource "harness_platform_project" "project" {
   description = "Example project description"
 }
 
+resource "harness_platform_secret_text" "githubsecret" {
+  identifier  = var.HARNESS_PROJECT_ID
+  org_id      = var.HARNESS_ORG_ID
+  identifier = var.HARNESS_GITHUB_SECRET_NAME
+  secret_manager_identifier = "harness"
+  value = var.HARNESS_GITHUB_SECRET_VALUE
+  
+  
+}
+
+
+
+
+
 resource "harness_platform_connector_aws" "aws_connector" {
  
   org_id      = var.HARNESS_ORG_ID
