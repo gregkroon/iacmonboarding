@@ -20,6 +20,8 @@ resource "harness_platform_project" "project" {
 }
 
 resource "harness_platform_secret_text" "githubsecret" {
+
+  depends_on = [harness_platform_project.project]
  
   org_id      = var.HARNESS_ORG_ID
   project_id  = var.HARNESS_PROJECT_ID
