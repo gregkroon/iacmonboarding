@@ -30,6 +30,7 @@ resource "harness_platform_connector_aws" "aws_connector" {
     secret_key_ref = var.AWS_SECRET_KEY
 
 }
+}
 
 resource "harness_platform_connector_github" "github_connector" {
   identifier = var.HARNESS_GITHUB_CONNECTOR_ID
