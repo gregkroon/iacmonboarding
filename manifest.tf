@@ -123,8 +123,8 @@ depends_on = [harness_platform_connector_github.github_connector,harness_platfor
 resource "harness_platform_pipeline" "pipeline" {
   org_id     = var.HARNESS_ORG_ID
   project_id = var.HARNESS_PROJECT_ID
-  identifier = var.HARNESS_PIPELINE_ID
-  name       = var.HARNESS_PIPELINE_ID
+  identifier = var.HARNESS_WORKSPACE_ID
+  name       = var.HARNESS_WORKSPACE_ID
 
   stage {
     name       = "IACM Stage"
