@@ -127,7 +127,7 @@ resource "harness_platform_pipeline" "pipeline" {
   identifier = var.HARNESS_WORKSPACE_ID
   name       = var.HARNESS_WORKSPACE_ID
 
-yaml = <<-EOT
+ yaml = <<-EOT
   pipeline:
     name: onboarding
     identifier: onboarding
@@ -141,12 +141,6 @@ yaml = <<-EOT
           description: ""
           type: IACM
           spec:
-            platform:
-              os: Linux
-              arch: Amd64
-            runtime:
-              type: Cloud
-              spec: {}
             workspace: ${harness_platform_workspace.workspace.identifier}
             execution:
               steps:
@@ -171,6 +165,22 @@ yaml = <<-EOT
                     timeout: 10m
                     spec:
                       command: apply
+            infrastructure:
+              type: KubernetesDirect
+              spec:
+                connectorRef: account.k8s
+                namespace: default
+                volumes: []
+                annotations: {}
+                labels: {}
+                automountServiceAccountToken: true
+                nodeSelector: {}
+                containerSecurityContext:
+                  capabilities:
+                    drop: []
+                    add: []
+                os: Linux
+                hostNames: []
           tags: {}
   EOT
 }
