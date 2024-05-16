@@ -120,6 +120,7 @@ depends_on = [harness_platform_connector_github.github_connector,harness_platfor
 
 }
 
+/*
 resource "harness_platform_pipeline" "pipeline" {
   org_id     = var.HARNESS_ORG_ID
   project_id = var.HARNESS_PROJECT_ID
@@ -161,3 +162,4 @@ resource "harness_platform_pipeline" "pipeline" {
   }
 }
 
+/*
