@@ -162,4 +162,4 @@ resource "harness_platform_pipeline" "pipeline" {
   }
 }
 
-/*
+*/
