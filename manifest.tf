@@ -126,18 +126,7 @@ resource "harness_platform_pipeline" "pipeline" {
   identifier = var.HARNESS_WORKSPACE_ID
   name       = var.HARNESS_WORKSPACE_ID
 
-  stage {
-    name       = "IACM Stage"
-    identifier = "IACM_STAGE"
-    type       = "IACM"
 
-    spec {
-      infrastructure {
-        type = "Workspace"
-        spec {
-          workspace_ref = harness_platform_workspace.workspace.id
-        }
-      }
 
       execution {
     steps {
