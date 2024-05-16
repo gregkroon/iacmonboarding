@@ -20,6 +20,8 @@ resource "harness_platform_project" "project" {
 }
 
 resource "harness_platform_connector_aws" "aws_connector" {
+  identifier  = var.HARNESS_PROJECT_ID
+  org_id      = var.HARNESS_ORG_ID
   identifier = var.HARNESS_AWS_CONNECTOR_ID
   name = var.HARNESS_AWS_CONNECTOR_ID
 
