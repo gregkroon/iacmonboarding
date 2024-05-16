@@ -25,7 +25,7 @@ resource "harness_platform_secret_text" "githubsecret" {
   project_id  = var.HARNESS_PROJECT_ID
   name = var.HARNESS_GITHUB_SECRET_NAME
   identifier = var.HARNESS_GITHUB_SECRET_NAME
-  secret_manager_identifier = "harness"
+  secret_manager_identifier = "harnessSecretManager"
   value = var.HARNESS_GITHUB_SECRET_VALUE
   value_type = "Inline"
   
