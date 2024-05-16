@@ -27,7 +27,7 @@ resource "harness_platform_connector_aws" "aws_connector" {
 
    manual {
     access_key = var.AWS_ACCESS_KEY
-    secret_key = var.AWS_SECRET_KEY
+    secret_key_ref = var.AWS_SECRET_KEY
   }
 }
 
