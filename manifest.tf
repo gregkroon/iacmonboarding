@@ -112,7 +112,7 @@ resource "harness_platform_workspace" "workspace" {
   repository = var.HARNESS_REPO
   provider_connector = var.HARNESS_AWS_CONNECTOR_ID
   provisioner_type = "terraform"
-  repository_connector = var.HARNESS_REPO_CONNECTOR
+  repository_connector = var.HARNESS_GITHUB_CONNECTOR_ID
 
 }
 
