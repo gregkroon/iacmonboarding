@@ -77,5 +77,9 @@ variable "GITHUB_TOKEN_REF" {
 variable "HARNESS_GITHUB_SECRET_VALUE" {
  type        = string
  }
- 
+
+variable "HARNESS_REPO_BRANCH" {
+ type        = string
+ }
+
 
