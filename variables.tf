@@ -35,9 +35,6 @@ variable "HARNESS_REPO" {
  type        = string
  }
 
-variable "HARNESS_PROVIDER_CONNECTOR" {
- type        = string
- }
 
 variable "HARNESS_PROVISONER_TYPE" {
  type        = string
