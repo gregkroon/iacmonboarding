@@ -22,6 +22,7 @@ resource "harness_platform_project" "project" {
 resource "harness_platform_secret_text" "githubsecret" {
  
   org_id      = var.HARNESS_ORG_ID
+  name = var.HARNESS_GITHUB_SECRET_NAME
   identifier = var.HARNESS_GITHUB_SECRET_NAME
   secret_manager_identifier = "harness"
   value = var.HARNESS_GITHUB_SECRET_VALUE
