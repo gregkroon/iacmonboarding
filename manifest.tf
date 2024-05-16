@@ -21,6 +21,7 @@ resource "harness_platform_project" "project" {
 
 resource "harness_platform_connector_aws" "aws_connector" {
   identifier = var.HARNESS_AWS_CONNECTOR_ID
+  name = var.HARNESS_AWS_CONNECTOR_ID
 
   aws_manual {
     access_key = var.AWS_ACCESS_KEY
