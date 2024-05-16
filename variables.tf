@@ -82,3 +82,12 @@ variable "GITHUB_TOKEN_REF" {
  type        = string
  }
 
+variable "HARNESS_GITHUB_SECRET_NAME" {
+ type        = string
+ }
+
+variable "HARNESS_GITHUB_SECRET_VALUE" {
+ type        = string
+ }
+ 
+
