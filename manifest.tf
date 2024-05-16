@@ -33,6 +33,7 @@ resource "harness_platform_connector_aws" "aws_connector" {
 
 resource "harness_platform_connector_github" "github_connector" {
   identifier = var.HARNESS_GITHUB_CONNECTOR_ID
+  connection_type = "Account"
 }
 
 /*
