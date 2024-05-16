@@ -83,3 +83,7 @@ variable "HARNESS_REPO_BRANCH" {
  }
 
 
+variable "HARNESS_PIPELINE_ID" {
+ type        = string
+ }
+
