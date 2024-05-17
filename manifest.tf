@@ -129,8 +129,8 @@ resource "harness_platform_pipeline" "pipeline" {
 
  yaml = <<-EOT
   pipeline:
-    name: onboarding
-    identifier: onboarding
+    name: ${var.HARNESS_PROJECT_ID}
+    identifier: ${var.HARNESS_PROJECT_ID}
     projectIdentifier: ${var.HARNESS_PROJECT_ID}
     orgIdentifier: ${var.HARNESS_ORG_ID}
     tags: {}
