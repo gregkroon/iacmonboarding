@@ -35,11 +35,6 @@ variable "HARNESS_REPO" {
  type        = string
  }
 
-
-variable "HARNESS_PROVISONER_TYPE" {
- type        = string
- }
-
 variable "HARNESS_GITHUB_CONNECTOR_ID" {
  type        = string
  }
