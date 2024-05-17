@@ -65,9 +65,6 @@ variable "GITHUB_USER" {
  type        = string
  }
 
-variable "GITHUB_USER_REF" {
- type        = string
- }
 
 variable "GITHUB_TOKEN_REF" {
  type        = string
