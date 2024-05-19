@@ -187,6 +187,9 @@ pipeline:
 
 ## 2. Create your github repository for onboarding and add the manifest.tf and variables.tf from this repository to it 
 
+<img width="935" alt="image" src="https://github.com/gregkroon/iacmonboarding/assets/44827446/cdbc78b9-b7a4-443a-9f9c-6e04257e62ab">
+
+
 
 ## 3. When executing use the input set or input the variables for the tenant atrributes 
 
