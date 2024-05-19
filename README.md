@@ -195,7 +195,7 @@ pipeline:
 ### HARNESS_GITHUB_URL
 
 - **Type**: String
-- **Description**: The URL of the GitHub repository containing the Terraform scripts.
+- **Description**: The URL of the GitHub account containing the repository and Terraform scripts for the tenant.
 - **Value**: `https://github.com/gregkroon`
 
 ### HARNESS_COST_ESTIMATION_ENABLED
@@ -237,7 +237,7 @@ pipeline:
 ### HARNESS_REPO
 
 - **Type**: String
-- **Description**: The repository name where Terraform configurations are stored.
+- **Description**: The repository name where Terraform manifests for the tenant are stored.
 - **Value**: `terraform-s3`
 
 ### HARNESS_WORKSPACE_ID
