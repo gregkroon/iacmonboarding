@@ -1,6 +1,10 @@
 # Onboarding Pipeline
 This repository contains the configuration for the Harness Onboarding Pipeline. This pipeline provisions new projects within Harness, including setting up workspaces and necessary resources using Terraform.
 
+
+<img width="979" alt="image" src="https://github.com/gregkroon/iacmonboarding/assets/44827446/0d737d88-4b67-4014-9fc8-30794e77d4f0">
+
+
 ## 1. Create the onboarding template in harness using this pipeline 
 Before running the pipeline, ensure you have the following:
 
