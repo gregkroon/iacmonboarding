@@ -185,10 +185,13 @@ pipeline:
 
 ```
 
-## 2. Create your github repository for onboarding and add the manifest.tf and variables.tf to it 
+## 2. Create your github repository for onboarding and add the manifest.tf and variables.tf from this repository to it 
 
 
-## 3. When executing us the input set or input the variables for the tenant atrributes 
+## 3. When executing use the input set or input the variables for the tenant atrributes 
+
+<img width="890" alt="image" src="https://github.com/gregkroon/iacmonboarding/assets/44827446/94374ddd-c205-4a89-80e8-36711429ffcc">
+
 
 ### HARNESS_ORG_ID
 
