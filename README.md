@@ -181,7 +181,70 @@ pipeline:
 
 ```
 
-## 2. Create your github repository for onboarding and add the 
+## 2. Create your github repository for onboarding and add the manifest.tf and variables.tf to it 
 
 
+## 3. When executing us the input set or input the variables for the tenant atrributes 
+
+### HARNESS_ORG_ID
+
+- **Type**: String
+- **Description**: The identifier for the Harness organization where the project will be created.
+- **Value**: `default`
+
+### HARNESS_GITHUB_URL
+
+- **Type**: String
+- **Description**: The URL of the GitHub repository containing the Terraform scripts.
+- **Value**: `https://github.com/gregkroon`
+
+### HARNESS_COST_ESTIMATION_ENABLED
+
+- **Type**: String
+- **Description**: Enables or disables cost estimation for the project. Set to `true` to enable.
+- **Value**: `true`
+
+### HARNESS_REPO_PATH
+
+- **Type**: String
+- **Description**: The path to the repository in GitHub. Use `.` for the root path.
+- **Value**: `.`
+
+### HARNESS_REPO_BRANCH
+
+- **Type**: String
+- **Description**: The branch of the repository to use for the pipeline.
+- **Value**: `main`
+
+### HARNESS_PROJECT_ID
+
+- **Type**: String
+- **Description**: The identifier for the new project being provisioned within Harness.
+- **Value**: `ProjectA`
+
+### HARNESS_PROVISIONER_VERSION
+
+- **Type**: String
+- **Description**: The version of the provisioner to be used.
+- **Value**: `1.5.6`
+
+### HARNESS_PROVISIONER_TYPE
+
+- **Type**: String
+- **Description**: The type of provisioner being used, such as Terraform.
+- **Value**: `terraform`
+
+### HARNESS_REPO
+
+- **Type**: String
+- **Description**: The repository name where Terraform configurations are stored.
+- **Value**: `terraform-s3`
+
+### HARNESS_WORKSPACE_ID
+
+- **Type**: String
+- **Description**: The identifier for the workspace within the new project.
+- **Value**: `ProjectA`
+
+---
 
