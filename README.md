@@ -189,7 +189,7 @@ pipeline:
 
 <img width="935" alt="image" src="https://github.com/gregkroon/iacmonboarding/assets/44827446/cdbc78b9-b7a4-443a-9f9c-6e04257e62ab">
 
-## 3. Create the following secrets in the onboarding project (these will be the secrets that are referenced for creating the tenant secrets everytime a new tenant is onboarded 
+## 3. Create the following secrets in the onboarding project (these will be the secrets that are referenced for creating the tenant secrets everytime a new tenant is onboarded)
 
 <img width="1421" alt="image" src="https://github.com/gregkroon/iacmonboarding/assets/44827446/94fe89b3-5de1-4d99-a0be-f740fc25613c">
 
