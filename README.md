@@ -1,7 +1,7 @@
 # Onboarding Pipeline
 This repository contains the configuration for the Harness Onboarding Pipeline. This pipeline provisions new projects within Harness, including setting up workspaces and necessary resources using Terraform.
 
-## Sample onboarding pipeline 
+## 1. Create the onboarding template in harness using this pipeline 
 Before running the pipeline, ensure you have the following:
 
 ```
@@ -181,6 +181,7 @@ pipeline:
 
 ```
 
+## 2. Create your github repository for onboarding and add the 
 
 
 
